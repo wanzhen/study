@@ -38,7 +38,7 @@ public class RedisToolLockTest {
 	    int expireTime = 100000;
 	    Boolean a = redisToolLock.tryGetDistributedLock(jedis, lockKey, requestId, expireTime);
 		System.out.println(a);
-	  //  redisToolLock.releaseDistributedLock(jedis, lockKey,requestId );
+	    redisToolLock.releaseDistributedLock(jedis, lockKey,requestId );
 		jedis.close();
 		 
 	}
